@@ -9,4 +9,6 @@ next_rate = 10
 remaining_rate = 20
 
 #Calculate income tax based on the rules
+if taxable_income <= first_taxable_income:
+    income_tax = taxable_income * (first_rate / 100)
 #Print the result
