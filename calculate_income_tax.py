@@ -14,4 +14,10 @@ if taxable_income <= first_taxable_income:
 elif taxable_income <= next_taxable_income:
     income_tax = first_taxable_income * (first_taxable_income/ 100) + \
                   (taxable_income - first_taxable_income) * (next_taxable_income / 100)
+else:
+    income_tax = first_taxable_income * (first_taxable_income / 100) + \
+                  (next_taxable_income - first_taxable_income) * (next_taxable_income / 100) + \
+                  (taxable_income - next_taxable_income) * (remaining_rate / 100)
+    
 #Print the result
+print(f"Total tax to pay is ${income_tax:.2f}")
